@@ -8,6 +8,7 @@ class CheckIfSortedTest {
 
 	@Test
 	void testCheckIfSorted() {
+		// testing int arrays
 		int[] arr1 = {};
 		int[] arr2 = {1};
 		int[] arr3 = { 0, 0, 0, 0, 0, 0, 0, 0};
@@ -22,5 +23,19 @@ class CheckIfSortedTest {
 		
 		assertFalse(CheckIfSorted.checkIfSorted(arr5));
 		assertFalse(CheckIfSorted.checkIfSorted(arr6));
+		
+		// testing String arrays
+		String[] str_arr1 = {};
+		String[] str_arr2 = {"ab"};
+		String[] str_arr3 = {"ab", "bc", "cd", "de", "ef", "fg"};
+		String[] str_arr4 = {"bc", "ab", "zz", "aa", "cc", "ee", "bb"};
+		String[] str_arr5 = {"zz", "aa"};
+		
+		assertTrue(CheckIfSorted.checkIfSorted(str_arr1));
+		assertTrue(CheckIfSorted.checkIfSorted(str_arr2));
+		assertTrue(CheckIfSorted.checkIfSorted(str_arr3));
+		
+		assertFalse(CheckIfSorted.checkIfSorted(str_arr4));
+		assertFalse(CheckIfSorted.checkIfSorted(str_arr5));
  	}
 }

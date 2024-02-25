@@ -25,6 +25,21 @@ public class CheckIfSorted {
 		return true;
 	}
 	
+	// for object array that implements comparable
+	public static <T extends Comparable<? super T>> boolean checkIfSorted(T[] arr) {
+		//edge case
+		if (arr.length == 0 || arr.length == 1) return true;
+		
+		for (int i = 1; i < arr.length; i++) {
+			// if using compareTo method on value at i to value at i - 1 < 0, return false
+			if (arr[i].compareTo(arr[i - 1]) < 0) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(checkIfSorted(new int[]{1, 2, 3}));
 		System.out.println(checkIfSorted(new int[]{ 2, 3, 1}));
