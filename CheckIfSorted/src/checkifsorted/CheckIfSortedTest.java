@@ -1,10 +1,28 @@
 package checkifsorted;
+/**
+ * This class provides unit test for CheckIfSorted Class
+ * 
+ * author: Phu Ha
+ * date: February 25, 2024
+ */
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 class CheckIfSortedTest {
+	
+	@Test
+	void testCheckIfSorted_withEmptyArray() {
+		assertTrue(CheckIfSorted.checkIfSorted(new int[] {} ));
+		assertTrue(CheckIfSorted.checkIfSorted(new String[] {} ));
+	}
+	
+	@Test
+	void testCheckIfSorted_withArraySizeOfOne() {
+		assertTrue(CheckIfSorted.checkIfSorted(new int[] {1} ));
+		assertTrue(CheckIfSorted.checkIfSorted(new String[] {"1"} ));
+	}
 
 	@Test
 	void testCheckIfSorted() {

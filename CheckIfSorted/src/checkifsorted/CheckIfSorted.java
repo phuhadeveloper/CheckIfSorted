@@ -41,7 +41,7 @@ public class CheckIfSorted {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(checkIfSorted(new int[]{1, 2, 3}));
-		System.out.println(checkIfSorted(new int[]{ 2, 3, 1}));
+		System.out.println("Is [1, 2, 3] sorted? " + checkIfSorted(new int[]{1, 2, 3}));
+		System.out.println("Is [2, 3, 1] sorted? " +checkIfSorted(new int[]{ 2, 3, 1}));
 	}
 }
